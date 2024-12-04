@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_3">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_3"
+        tools:context=".FirstCartoonsActivity">
+
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="Question 1"
+            android:textColor="#0E4E9A"
+            android:textSize="24sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/setQuestion1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:gravity="center"
+            android:text="Question"
+            android:textColor="#000000"
+            android:textColorHint="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:layout_marginTop="50dp"
+            app:layout_constraintEnd_toEndOf="@+id/setQuestion1"
+            app:layout_constraintStart_toStartOf="@+id/setQuestion1"
+            app:layout_constraintTop_toBottomOf="@+id/setQuestion1">
+
+            <RadioButton
+                android:id="@+id/cartoon1A"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Option A" />
+
+            <RadioButton
+                android:id="@+id/cartoon1B"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Option B" />
+
+            <RadioButton
+                android:id="@+id/cartoon1C"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Option C" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/cartoonNext1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="50dp"
+            android:backgroundTint="#40DF13"
+            android:text="Next"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/radioGroup1"
+            app:layout_constraintStart_toStartOf="@+id/radioGroup1"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup1" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

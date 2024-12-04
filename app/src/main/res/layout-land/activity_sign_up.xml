@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background"
+        tools:context=".SignUpActivity">
+
+        <TextView
+            android:id="@+id/signUpText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="20dp"
+            android:text="SIGN UP"
+            android:textColor="#000000"
+            android:textSize="36sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="350dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="40dp"
+            android:background="#90ffffff"
+            android:backgroundTint="#F8E4E4"
+            android:drawableLeft="@drawable/baseline_email_24"
+            android:drawablePadding="10dp"
+            android:ems="10"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:paddingStart="10dp"
+            android:textColorHint="#000000"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/signUpText" />
+
+        <EditText
+            android:id="@+id/signUpUsername"
+            android:layout_width="350dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="40dp"
+            android:background="#90ffffff"
+            android:backgroundTint="#F8E4E4"
+            android:drawableLeft="@drawable/baseline_person_24"
+            android:drawablePadding="10dp"
+            android:ems="10"
+            android:hint="Username"
+            android:inputType="textPersonName"
+            android:paddingStart="10dp"
+            android:textColorHint="#000000"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/email"
+            app:layout_constraintStart_toStartOf="@+id/email"
+            app:layout_constraintTop_toBottomOf="@+id/email" />
+
+        <EditText
+            android:id="@+id/signUpPassword"
+            android:layout_width="350dp"
+            android:layout_height="70dp"
+            android:layout_marginEnd="40dp"
+            android:background="#90ffffff"
+            android:backgroundTint="#F8E4E4"
+            android:drawableLeft="@drawable/baseline_password_24"
+            android:drawablePadding="10dp"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textPersonName|textPassword"
+            android:paddingStart="10dp"
+            android:textColorHint="#000000"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/email"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/email" />
+
+        <EditText
+            android:id="@+id/rePassword"
+            android:layout_width="350dp"
+            android:layout_height="70dp"
+            android:background="#90ffffff"
+            android:backgroundTint="#F8E4E4"
+            android:drawableLeft="@drawable/baseline_password_24"
+            android:drawablePadding="10dp"
+            android:ems="10"
+            android:hint="Retype Password"
+            android:inputType="textPersonName|textPassword"
+            android:paddingStart="10dp"
+            android:textColorHint="#000000"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/signUpUsername"
+            app:layout_constraintEnd_toEndOf="@+id/signUpPassword"
+            app:layout_constraintStart_toStartOf="@+id/signUpPassword"
+            app:layout_constraintTop_toTopOf="@+id/signUpUsername" />
+
+        <Button
+            android:id="@+id/signUpButton"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="#64BA7B"
+            android:text="Sign Up"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/signUpUsername"
+            app:layout_constraintStart_toStartOf="@+id/signUpUsername"
+            app:layout_constraintTop_toBottomOf="@+id/signUpUsername" />
+
+        <TextView
+            android:id="@+id/signInView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Already have an account? SIGN IN"
+            android:textColor="#5306BF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/signUpButton"
+            app:layout_constraintEnd_toEndOf="@+id/rePassword"
+            app:layout_constraintStart_toStartOf="@+id/rePassword"
+            app:layout_constraintTop_toTopOf="@+id/signUpButton" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

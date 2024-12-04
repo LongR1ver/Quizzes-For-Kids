@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background"
+        tools:context=".HomeActivity">
+
+        <Button
+            android:id="@+id/logOffButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:backgroundTint="#64BA7B"
+            android:text="Log Off"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.501"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cartoonsCard" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/animalsCard"
+            android:layout_width="210dp"
+            android:layout_height="210dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="50dp"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="60dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scoreButton">
+
+            <LinearLayout
+                android:layout_width="210dp"
+                android:layout_height="210dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:background="@drawable/background_2"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="185dp"
+                    android:layout_height="180dp"
+                    android:src="@drawable/animals" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Animals"
+                    android:textAlignment="center"
+                    android:textColor="#20AA82"
+                    android:textSize="20sp"
+                    android:textStyle="bold|italic" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cartoonsCard"
+            android:layout_width="210dp"
+            android:layout_height="210dp"
+            android:layout_marginEnd="50dp"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="60dp"
+            app:layout_constraintBottom_toBottomOf="@+id/animalsCard"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/animalsCard">
+
+            <LinearLayout
+                android:layout_width="210dp"
+                android:layout_height="210dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:background="@drawable/background_2"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="185dp"
+                    android:layout_height="180dp"
+                    android:src="@drawable/cartoons" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cartoons"
+                    android:textAlignment="center"
+                    android:textColor="#20AA82"
+                    android:textSize="20sp"
+                    android:textStyle="bold|italic" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/greetingView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Hello"
+            android:textColor="#1884CD"
+            android:textSize="36sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+        <Button
+            android:id="@+id/changePasswordButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="#64BA7B"
+            android:text="Change Password"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/logOffButton"
+            app:layout_constraintStart_toStartOf="@+id/logOffButton"
+            app:layout_constraintTop_toBottomOf="@+id/logOffButton" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/logo" />
+
+        <Button
+            android:id="@+id/scoreButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:backgroundTint="#64BA7B"
+            android:text="Score"
+            app:layout_constraintEnd_toEndOf="@+id/animalsCard"
+            app:layout_constraintStart_toStartOf="@+id/animalsCard"
+            app:layout_constraintTop_toBottomOf="@+id/greetingView" />
+
+        <Button
+            android:id="@+id/instructionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#64BA7B"
+            android:text="Instructions"
+            app:layout_constraintBottom_toBottomOf="@+id/scoreButton"
+            app:layout_constraintEnd_toEndOf="@+id/cartoonsCard"
+            app:layout_constraintStart_toStartOf="@+id/cartoonsCard"
+            app:layout_constraintTop_toTopOf="@+id/scoreButton" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
